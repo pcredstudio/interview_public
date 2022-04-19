@@ -12,6 +12,7 @@ const Auth = {
   login({ username, password }) {
     return new Promise((resolve, reject) =>
       setTimeout(function() {
+       
         if (username === "" || password === "") {
           return reject(new Error(VALIDATION_ERROR));
         } else if (username === "z" && password === "z") {

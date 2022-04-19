@@ -14,6 +14,8 @@ class LoginForm extends Component {
       username: this.username.current.value,
       password: this.password.current.value
     });
+
+
   }
 
   render() {
@@ -37,6 +39,8 @@ class LoginForm extends Component {
         >
           Submit
         </button>
+        {console.log(this.props.error)}
+        {(this.props.error) ? <p style={{color:"red"}}>Missing or Invalid Data</p> : null}
       </form>
     );
   }
